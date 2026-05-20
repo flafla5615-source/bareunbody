@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>더바른바디 | 진주 프리미엄 바디케어 센터</title>
+  <meta name="description" content="경남 진주 프리미엄 바디케어 센터. 운동을 시키기 전에 당신 몸이 왜 망가졌는지부터 봅니다. 진주 체형교정, 통증케어, 재활운동, 시니어운동 전문."/>
+  <meta name="keywords" content="진주 PT, 진주 체형교정, 진주 통증케어, 진주 재활운동, 진주 시니어운동, 진주 프리미엄 PT, 진주 개인PT, 진주 바디케어"/>
+  <meta property="og:title" content="더바른바디 | 진주 프리미엄 바디케어 센터"/>
+  <meta property="og:description" content="경남에서 가장 비싼 PT에는 이유가 있습니다."/>
+  <meta property="og:type" content="website"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Noto Serif KR', 'serif'],
+            sans: ['Noto Sans KR', 'sans-serif'],
+          },
+          colors: {
+            ink: '#0A0A0A',
+            paper: '#F8F7F4',
+            muted: '#8C8A84',
+            accent: '#C8B89A',
+            border: '#E2E0DA',
+          },
+          letterSpacing: {
+            widest2: '0.25em',
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Noto Sans KR', sans-serif; background: #F8F7F4; color: #0A0A0A; }
+    .font-serif { font-family: 'Noto Serif KR', serif; }
+
+    /* Fade-in animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* Hero text gradient */
+    .hero-headline {
+      background: linear-gradient(135deg, #0A0A0A 0%, #3A3A3A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Section number */
+    .section-no {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      color: #C8B89A;
+      text-transform: uppercase;
+    }
+
+    /* Divider line */
+    .thin-line {
+      width: 40px;
+      height: 1px;
+      background: #C8B89A;
+      display: block;
+    }
+
+    /* Comparison table */
+    .compare-row:not(:last-child) {
+      border-bottom: 1px solid #E2E0DA;
+    }
+
+    /* Review card */
+    .review-card {
+      border: 1px solid #E2E0DA;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .review-card:hover {
+      border-color: #C8B89A;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+    }
+
+    /* Sticky CTA */
+    #sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #sticky-cta.show { transform: translateY(0); }
+
+    /* Nav */
+    #navbar {
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+    }
+    #navbar.scrolled {
+      background: rgba(248, 247, 244, 0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 #E2E0DA;
+    }
+
+    /* Image placeholder */
+    .img-placeholder {
+      background: linear-gradient(135deg, #E8E5DF 0%, #D4CFC6 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Problem grid item */
+    .problem-item {
+      border-left: 2px solid #E2E0DA;
+      transition: border-color 0.3s ease;
+    }
+    .problem-item:hover {
+      border-left-color: #C8B89A;
+    }
+
+    /* Feature badge */
+    .feature-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border: 1px solid #C8B89A;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: #8C8A84;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #F8F7F4; }
+    ::-webkit-scrollbar-thumb { background: #C8B89A; border-radius: 2px; }
+  </style>
+</head>
+<body class="bg-paper">
+
+  <!-- ==============================
+       NAVIGATION
+  ============================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 px-6 py-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="font-serif font-medium text-ink text-sm tracking-widest">
+        더바른바디
+      </div>
+      <a href="#cta"
+         class="hidden md:inline-flex items-center gap-2 text-xs tracking-widest font-medium text-ink border border-ink px-5 py-2.5 hover:bg-ink hover:text-paper transition-all duration-300">
+        상담 예약
+      </a>
+      <button class="md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 5H17M3 10H17M3 15H17" stroke="#0A0A0A" stroke-width="1.5"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-border pt-4">
+      <a href="#why" class="block text-xs tracking-wider py-2 text-muted">왜 다른가</a>
+      <a href="#cases" class="block text-xs tracking-wider py-2 text-muted">케어 분야</a>
+      <a href="#reviews" class="block text-xs tracking-wider py-2 text-muted">후기</a>
+      <a href="#space" class="block text-xs tracking-wider py-2 text-muted">공간</a>
+      <a href="#cta" class="block text-xs tracking-widest font-medium py-3 text-ink mt-2">→ 상담 예약</a>
+    </div>
+  </nav>
+
+
+  <!-- ==============================
+       1. HERO SECTION
+  ============================== -->
+  <section id="hero" class="min-h-screen flex flex-col justify-center relative overflow-hidden bg-ink">
+
+    <!-- Background texture -->
+    <div class="absolute inset-0 opacity-5"
+         style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 md:px-12 pt-28 pb-20">
+
+      <!-- Label -->
+      <div class="reveal flex items-center gap-4 mb-12">
+        <span class="thin-line"></span>
+        <span class="section-no" style="color: #C8B89A;">JINJU · PREMIUM BODY CARE</span>
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="reveal reveal-delay-1 font-serif font-medium text-white leading-tight mb-8"
+          style="font-size: clamp(2.4rem, 6vw, 5.2rem); letter-spacing: -0.02em; line-height: 1.15;">
+        경남에서<br/>
+        가장 비싼 PT에는<br/>
+        <span style="color: #C8B89A;">이유가 있습니다.</span>
+      </h1>
+
+      <!-- Sub copy -->
+      <p class="reveal reveal-delay-2 text-gray-400 font-light leading-relaxed mb-14"
+         style="font-size: clamp(1rem, 2.2vw, 1.35rem); max-width: 520px; line-height: 1.8;">
+        운동을 시키기 전에<br/>
+        당신 몸이 <em style="color: #C8B89A; font-style: normal;">왜 망가졌는지</em>부터 봅니다.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4">
+        <a href="#cta"
+           class="inline-flex items-center justify-center gap-3 bg-white text-ink px-8 py-4 text-sm font-medium tracking-widest hover:bg-accent hover:text-ink transition-all duration-300">
+          상담 예약하기
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
+        <a href="#why"
+           class="inline-flex items-center justify-center gap-3 border border-gray-600 text-gray-300 px-8 py-4 text-sm font-medium tracking-widest hover:border-accent hover:text-accent transition-all duration-300">
+          내 몸 상태 진단받기
+        </a>
+      </div>
+
+      <!-- Sub info -->
+      <div class="reveal reveal-delay-4 mt-16 pt-10 border-t border-gray-800 flex flex-wrap gap-8 text-gray-500 text-xs tracking-wider">
+        <span>경남 진주시 초전북로39번길 6-22 1층</span>
+        <span>완전 1:1 프라이빗</span>
+        <span>움직임 분석 기반</span>
+        <span>통증케어 전문</span>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+      <span class="text-white text-xs tracking-widest">SCROLL</span>
+      <div style="width:1px; height:40px; background: linear-gradient(to bottom, #fff, transparent);"></div>
+    </div>
+
+  </section>
+
+
+  <!-- ==============================
+       2. 문제 공감 SECTION
+  ============================== -->
+  <section id="problem" class="py-28 md:py-36 bg-paper">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+
+      <!-- Label -->
+      <div class="reveal flex items-center gap-4 mb-10">
+        <span class="thin-line"></span>
+        <span class="section-no">01 · THE PROBLEM</span>
+      </div>
+
+      <!-- Headline -->
+      <div class="reveal reveal-delay-1 mb-6">
+        <h2 class="font-serif font-medium leading-tight text-ink"
+            style="font-size: clamp(1.9rem, 4.5vw, 3.6rem); letter-spacing: -0.02em; line-height: 1.25;">
+          "열심히 하는데<br/>
+          왜 몸이 더 아플까요?"
+        </h2>
+      </div>
+
+      <p class="reveal reveal-delay-2 text-muted font-light leading-relaxed mb-20 max-w-xl"
+         style="font-size: 1.05rem; line-height: 1.9;">
+        문제는 운동 부족이 아닙니다.<br/>
+        <strong class="text-ink font-medium">몸을 사용하는 방식</strong>이 처음부터 잘못되어 있습니다.
+      </p>
+
+      <!-- Problem grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+
+        <div class="reveal problem-item pl-6 py-6 md:py-8">
+          <p class="text-xs text-accent tracking-widest mb-2">01</p>
+          <h3 class="font-serif font-medium text-ink text-lg mb-2">운동할수록 더 아픈 몸</h3>
+          <p class="text-muted text-sm leading-relaxed font-light">열심히 할수록 오히려 통증이 심해집니다. 잘못된 움직임 패턴 위에 운동을 쌓으면 문제가 쌓일 뿐입니다.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 problem-item pl-6 py-6 md:py-8 md:ml-8">
+          <p class="text-xs text-accent tracking-widest mb-2">02</p>
+          <h3 class="font-serif font-medium text-ink text-lg mb-2">병원에서는 이상 없다는데</h3>
+          <p class="text-muted text-sm leading-relaxed font-light">MRI·X-ray에는 이상이 없다고 합니다. 그런데 몸은 계속 불편합니다. 구조적 문제가 아닌 기능적 문제입니다.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 problem-item pl-6 py-6 md:py-8 mt-0 md:mt-6">
+          <p class="text-xs text-accent tracking-widest mb-2">03</p>
+          <h3 class="font-serif font-medium text-ink text-lg mb-2">마사지·도수, 반복해도 제자리</h3>
+          <p class="text-muted text-sm leading-relaxed font-light">받을 때는 편하지만 다음 날이면 돌아옵니다. 증상만 다루면 원인은 그대로입니다.</p>
+        </div>
+
+        <div class="reveal reveal-delay-3 problem-item pl-6 py-6 md:py-8 mt-0 md:mt-6 md:ml-8">
+          <p class="text-xs text-accent tracking-widest mb-2">04</p>
+          <h3 class="font-serif font-medium text-ink text-lg mb-2">PT 받고 더 틀어진 자세</h3>
+          <p class="text-muted text-sm leading-relaxed font-light">트레이너의 루틴이 내 몸에 맞지 않았을 때 일어나는 일. 모든 사람에게 같은 운동을 시키는 것의 결과입니다.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 problem-item pl-6 py-6 md:py-8 mt-0 md:mt-6">
+          <p class="text-xs text-accent tracking-widest mb-2">05</p>
+          <h3 class="font-serif font-medium text-ink text-lg mb-2">오래 앉으면 무너지는 허리</h3>
+          <p class="text-muted text-sm leading-relaxed font-light">의자에 1시간만 앉아 있어도 허리가 무너집니다. 근육이 없어서가 아니라 제 위치에서 버티는 방법을 모르기 때문입니다.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 problem-item pl-6 py-6 md:py-8 mt-0 md:mt-6 md:ml-8">
+          <p class="text-xs text-accent tracking-widest mb-2">06</p>
+          <h3 class="font-serif font-medium text-ink text-lg mb-2">나이 들수록 불안한 체력</h3>
+          <p class="text-muted text-sm leading-relaxed font-light">무작정 운동량을 늘리는 건 답이 아닙니다. 나이에 맞는 움직임의 질을 찾아야 지속됩니다.</p>
+        </div>
+
+      </div>
+
+      <!-- Bridge -->
+      <div class="reveal mt-20 p-8 md:p-12 bg-ink text-white">
+        <p class="font-serif font-light leading-relaxed"
+           style="font-size: clamp(1.1rem, 2.5vw, 1.5rem); line-height: 1.8;">
+          더바른바디는 증상이 아닌<br/>
+          <strong class="font-medium" style="color: #C8B89A;">원인</strong>에서 시작합니다.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       3. 왜 비싼가 SECTION (핵심)
+  ============================== -->
+  <section id="why" class="py-28 md:py-36 bg-ink text-white">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+
+      <!-- Label -->
+      <div class="reveal flex items-center gap-4 mb-10">
+        <span class="thin-line"></span>
+        <span class="section-no" style="color: #8C8A84;">02 · WHY THE DIFFERENCE</span>
+      </div>
+
+      <!-- Headline -->
+      <div class="reveal reveal-delay-1 mb-6">
+        <h2 class="font-serif font-medium leading-tight text-white"
+            style="font-size: clamp(1.9rem, 4.5vw, 3.6rem); letter-spacing: -0.02em; line-height: 1.25;">
+          우리는 시간을 팔지 않습니다.<br/>
+          <span style="color: #C8B89A;">몸의 원인을 찾습니다.</span>
+        </h2>
+      </div>
+
+      <p class="reveal reveal-delay-2 font-light leading-relaxed mb-20 max-w-xl"
+         style="color: #9A9A92; font-size: 1.05rem; line-height: 1.9;">
+        같은 운동을 시키지 않기 때문에 비쌉니다.<br/>
+        매 수업이 당신만을 위해 설계됩니다.
+      </p>
+
+      <!-- Process steps -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-800 mb-20">
+
+        <div class="reveal bg-ink p-8 md:p-10">
+          <p class="text-xs text-accent tracking-widest mb-4">STEP 01</p>
+          <h3 class="font-serif font-medium text-white text-xl mb-4">몸 상태 분석</h3>
+          <p class="text-gray-500 text-sm leading-relaxed font-light">자세, 골반 정렬, 관절 움직임 범위, 근육 불균형, 호흡 패턴까지 전체적으로 평가합니다.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 bg-ink p-8 md:p-10">
+          <p class="text-xs text-accent tracking-widest mb-4">STEP 02</p>
+          <h3 class="font-serif font-medium text-white text-xl mb-4">움직임 패턴 분석</h3>
+          <p class="text-gray-500 text-sm leading-relaxed font-light">걷기, 앉기, 서기, 들기. 일상의 모든 움직임 패턴에서 문제의 근원을 찾습니다.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 bg-ink p-8 md:p-10">
+          <p class="text-xs text-accent tracking-widest mb-4">STEP 03</p>
+          <h3 class="font-serif font-medium text-white text-xl mb-4">맞춤 프로그램 설계</h3>
+          <p class="text-gray-500 text-sm leading-relaxed font-light">분석 결과를 기반으로 당신에게만 맞는 운동 순서, 강도, 목표를 설계합니다.</p>
+        </div>
+
+      </div>
+
+      <!-- What we check -->
+      <div class="reveal mb-24">
+        <p class="text-xs text-gray-500 tracking-widest mb-8">첫 세션에서 확인하는 것들</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">자세 정렬</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">골반 틸트</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">흉추 가동성</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">호흡 패턴</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">발 아치</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">고관절 움직임</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">근육 불균형</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">어깨 정렬</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">생활 습관</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">수면 자세</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">통증 이력</span>
+          <span class="feature-badge" style="border-color:#3A3A3A; color:#6A6A62;">컨디션 변화</span>
+        </div>
+      </div>
+
+      <!-- ★ Comparison Table ★ -->
+      <div class="reveal">
+        <p class="text-xs text-gray-500 tracking-widest mb-10">일반 PT 와 더바른바디의 차이</p>
+
+        <div class="grid grid-cols-3 gap-px bg-gray-800">
+
+          <!-- Header row -->
+          <div class="bg-ink p-5 md:p-7 flex items-end">
+            <span class="text-xs text-gray-600 tracking-wider font-light">비교 항목</span>
+          </div>
+          <div class="bg-gray-900 p-5 md:p-7 flex items-end">
+            <span class="text-xs text-gray-500 tracking-wider font-light">일반 PT</span>
+          </div>
+          <div class="p-5 md:p-7 flex items-end" style="background: #111108;">
+            <span class="text-xs tracking-wider font-medium" style="color: #C8B89A;">더바른바디</span>
+          </div>
+
+          <!-- Row 1 -->
+          <div class="compare-row bg-ink p-5 md:p-7 flex items-center border-t border-gray-800">
+            <span class="text-sm text-gray-400 font-light">프로그램 방식</span>
+          </div>
+          <div class="compare-row bg-gray-900 p-5 md:p-7 flex items-center border-t border-gray-800">
+            <span class="text-sm text-gray-500 font-light">정해진 루틴<br/><span class="text-xs text-gray-700">모든 회원 동일</span></span>
+          </div>
+          <div class="compare-row p-5 md:p-7 flex items-center border-t border-gray-800" style="background: #111108;">
+            <span class="text-sm text-white font-light">몸 상태 기반 설계<br/><span class="text-xs" style="color: #C8B89A;">완전 개인화</span></span>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="compare-row bg-ink p-5 md:p-7 flex items-center">
+            <span class="text-sm text-gray-400 font-light">접근 중심</span>
+          </div>
+          <div class="compare-row bg-gray-900 p-5 md:p-7 flex items-center">
+            <span class="text-sm text-gray-500 font-light">운동 횟수<br/><span class="text-xs text-gray-700">볼륨, 강도</span></span>
+          </div>
+          <div class="compare-row p-5 md:p-7 flex items-center" style="background: #111108;">
+            <span class="text-sm text-white font-light">움직임 원인 분석<br/><span class="text-xs" style="color: #C8B89A;">왜 아픈지부터</span></span>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="compare-row bg-ink p-5 md:p-7 flex items-center">
+            <span class="text-sm text-gray-400 font-light">목표</span>
+          </div>
+          <div class="compare-row bg-gray-900 p-5 md:p-7 flex items-center">
+            <span class="text-sm text-gray-500 font-light">다이어트<br/><span class="text-xs text-gray-700">체중 감량</span></span>
+          </div>
+          <div class="compare-row p-5 md:p-7 flex items-center" style="background: #111108;">
+            <span class="text-sm text-white font-light">통증 해소·회복<br/><span class="text-xs" style="color: #C8B89A;">몸의 정상화</span></span>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="compare-row bg-ink p-5 md:p-7 flex items-center">
+            <span class="text-sm text-gray-400 font-light">케어 방식</span>
+          </div>
+          <div class="compare-row bg-gray-900 p-5 md:p-7 flex items-center">
+            <span class="text-sm text-gray-500 font-light">다수 동시 관리<br/><span class="text-xs text-gray-700">멀티 케어</span></span>
+          </div>
+          <div class="compare-row p-5 md:p-7 flex items-center" style="background: #111108;">
+            <span class="text-sm text-white font-light">완전 1:1 밀착<br/><span class="text-xs" style="color: #C8B89A;">시선 분리 없음</span></span>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="bg-ink p-5 md:p-7 flex items-center">
+            <span class="text-sm text-gray-400 font-light">수업 변화</span>
+          </div>
+          <div class="bg-gray-900 p-5 md:p-7 flex items-center">
+            <span class="text-sm text-gray-500 font-light">매주 비슷함<br/><span class="text-xs text-gray-700">고정 구성</span></span>
+          </div>
+          <div class="p-5 md:p-7 flex items-center" style="background: #111108;">
+            <span class="text-sm text-white font-light">컨디션 기반 조정<br/><span class="text-xs" style="color: #C8B89A;">오늘의 몸에 맞게</span></span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       4. 특수 케이스 SECTION
+  ============================== -->
+  <section id="cases" class="py-28 md:py-36 bg-paper">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+
+      <!-- Label -->
+      <div class="reveal flex items-center gap-4 mb-10">
+        <span class="thin-line"></span>
+        <span class="section-no">03 · CARE EXPERTISE</span>
+      </div>
+
+      <!-- Headline -->
+      <div class="reveal reveal-delay-1 mb-6">
+        <h2 class="font-serif font-medium leading-tight text-ink"
+            style="font-size: clamp(1.9rem, 4.5vw, 3.6rem); letter-spacing: -0.02em; line-height: 1.25;">
+          운동 잘하는 사람보다<br/>
+          <span class="text-muted">아픈 사람을 더 많이<br/>봐왔습니다.</span>
+        </h2>
+      </div>
+
+      <p class="reveal reveal-delay-2 text-muted font-light leading-relaxed mb-20 max-w-xl"
+         style="font-size: 1.05rem; line-height: 1.9;">
+        일반 운동센터에서 케어받기 어려운 분들을 위한<br/>
+        운동 기반 케어 프로그램을 운영합니다.
+      </p>
+
+      <!-- Care areas grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
+
+        <div class="reveal bg-paper p-6 md:p-8 hover:bg-ink hover:text-white transition-all duration-300 group cursor-default">
+          <div class="text-2xl mb-4 opacity-40 group-hover:opacity-60 transition-opacity">○</div>
+          <h4 class="font-serif font-medium text-ink group-hover:text-white text-base mb-2 transition-colors">시니어 케어</h4>
+          <p class="text-muted group-hover:text-gray-400 text-xs font-light leading-relaxed transition-colors">낙상 예방, 균형감각, 일상 동작 개선을 중심으로 접근합니다.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 bg-paper p-6 md:p-8 hover:bg-ink hover:text-white transition-all duration-300 group cursor-default">
+          <div class="text-2xl mb-4 opacity-40 group-hover:opacity-60 transition-opacity">○</div>
+          <h4 class="font-serif font-medium text-ink group-hover:text-white text-base mb-2 transition-colors">만성 통증</h4>
+          <p class="text-muted group-hover:text-gray-400 text-xs font-light leading-relaxed transition-colors">목, 어깨, 허리, 고관절의 만성 불편함을 운동으로 접근합니다.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 bg-paper p-6 md:p-8 hover:bg-ink hover:text-white transition-all duration-300 group cursor-default">
+          <div class="text-2xl mb-4 opacity-40 group-hover:opacity-60 transition-opacity">○</div>
+          <h4 class="font-serif font-medium text-ink group-hover:text-white text-base mb-2 transition-colors">체형 불균형</h4>
+          <p class="text-muted group-hover:text-gray-400 text-xs font-light leading-relaxed transition-colors">골반 비대칭, 척추 측만 경향, 어깨 높이 차이 등 구조적 불균형.</p>
+        </div>
+
+        <div class="reveal reveal-delay-3 bg-paper p-6 md:p-8 hover:bg-ink hover:text-white transition-all duration-300 group cursor-default">
+          <div class="text-2xl mb-4 opacity-40 group-hover:opacity-60 transition-opacity">○</div>
+          <h4 class="font-serif font-medium text-ink group-hover:text-white text-base mb-2 transition-colors">수술 후 운동</h4>
+          <p class="text-muted group-hover:text-gray-400 text-xs font-light leading-relaxed transition-colors">수술 후 회복기, 재활 이후 기능 회복 단계의 맞춤 운동.</p>
+        </div>
+
+        <div class="reveal bg-paper p-6 md:p-8 hover:bg-ink hover:text-white transition-all duration-300 group cursor-default">
+          <div class="text-2xl mb-4 opacity-40 group-hover:opacity-60 transition-opacity">○</div>
+          <h4 class="font-serif font-medium text-ink group-hover:text-white text-base mb-2 transition-colors">거북목·일자목</h4>
+          <p class="text-muted group-hover:text-gray-400 text-xs font-light leading-relaxed transition-colors">경추 정렬, 흉추 가동성 회복, 경부 근육 밸런스 개선.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 bg-paper p-6 md:p-8 hover:bg-ink hover:text-white transition-all duration-300 group cursor-default">
+          <div class="text-2xl mb-4 opacity-40 group-hover:opacity-60 transition-opacity">○</div>
+          <h4 class="font-serif font-medium text-ink group-hover:text-white text-base mb-2 transition-colors">출산 후 체형</h4>
+          <p class="text-muted group-hover:text-gray-400 text-xs font-light leading-relaxed transition-colors">골반저근 회복, 복부 재활, 출산 후 변화된 몸의 재정렬.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 bg-paper p-6 md:p-8 hover:bg-ink hover:text-white transition-all duration-300 group cursor-default">
+          <div class="text-2xl mb-4 opacity-40 group-hover:opacity-60 transition-opacity">○</div>
+          <h4 class="font-serif font-medium text-ink group-hover:text-white text-base mb-2 transition-colors">디스크 이후</h4>
+          <p class="text-muted group-hover:text-gray-400 text-xs font-light leading-relaxed transition-colors">디스크 치료 이후 재발 방지와 코어 기능 회복 중심 접근.</p>
+        </div>
+
+        <div class="reveal reveal-delay-3 bg-paper p-6 md:p-8 hover:bg-ink hover:text-white transition-all duration-300 group cursor-default">
+          <div class="text-2xl mb-4 opacity-40 group-hover:opacity-60 transition-opacity">○</div>
+          <h4 class="font-serif font-medium text-ink group-hover:text-white text-base mb-2 transition-colors">특수 케이스</h4>
+          <p class="text-muted group-hover:text-gray-400 text-xs font-light leading-relaxed transition-colors">이명증 관련 신체 케어 등, 일반 센터에서 거절당한 분들도 상담 환영합니다.</p>
+        </div>
+
+      </div>
+
+      <!-- Note -->
+      <div class="reveal mt-10 p-6 border border-border">
+        <p class="text-xs text-muted font-light leading-relaxed tracking-wide">
+          ※ 더바른바디의 모든 서비스는 운동 기반 케어이며, 의료행위가 아닙니다.<br/>
+          의학적 진단이나 치료가 필요한 경우 반드시 의료기관을 먼저 방문해 주세요.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       5. 후기 SECTION
+  ============================== -->
+  <section id="reviews" class="py-28 md:py-36 bg-ink text-white">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+
+      <!-- Label -->
+      <div class="reveal flex items-center gap-4 mb-10">
+        <span class="thin-line"></span>
+        <span class="section-no" style="color: #8C8A84;">04 · CLIENT STORIES</span>
+      </div>
+
+      <!-- Headline -->
+      <div class="reveal reveal-delay-1 mb-20">
+        <h2 class="font-serif font-medium leading-tight text-white"
+            style="font-size: clamp(1.9rem, 4.5vw, 3.6rem); letter-spacing: -0.02em; line-height: 1.25;">
+          체중이 아닌<br/>
+          <span style="color: #C8B89A;">삶이 달라졌습니다.</span>
+        </h2>
+      </div>
+
+      <!-- Review cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="reveal review-card p-8 md:p-10" style="background: #111108; border-color: #2A2A22;">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="text-accent text-xs tracking-widest">★★★★★</span>
+            <span class="text-gray-600 text-xs ml-2">실제 회원 후기</span>
+          </div>
+          <blockquote class="font-serif font-light text-gray-200 leading-relaxed mb-6"
+                      style="font-size: 1.1rem; line-height: 1.8;">
+            "10년 된 허리 통증이 3개월 만에 달라졌습니다. 정형외과에서 수술 얘기까지 나왔는데, 여기서 운동 방식을 바꾸고 나서 지금은 오래 앉아도 괜찮습니다."
+          </blockquote>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+            <div class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+              <span class="text-xs text-gray-400">김</span>
+            </div>
+            <div>
+              <p class="text-sm text-gray-300 font-light">김 ○○ 님</p>
+              <p class="text-xs text-gray-600">50대 · 만성 허리 통증</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1 review-card p-8 md:p-10" style="background: #111108; border-color: #2A2A22;">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="text-accent text-xs tracking-widest">★★★★★</span>
+            <span class="text-gray-600 text-xs ml-2">실제 회원 후기</span>
+          </div>
+          <blockquote class="font-serif font-light text-gray-200 leading-relaxed mb-6"
+                      style="font-size: 1.1rem; line-height: 1.8;">
+            "다른 PT샵 3곳을 다녔는데 여기가 완전히 달랐어요. 제 몸 구조를 먼저 보고 설명해줬는데, 처음으로 내 몸이 왜 이렇게 됐는지 납득이 됐습니다."
+          </blockquote>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+            <div class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+              <span class="text-xs text-gray-400">이</span>
+            </div>
+            <div>
+              <p class="text-sm text-gray-300 font-light">이 ○○ 님</p>
+              <p class="text-xs text-gray-600">40대 · 자세 불균형·목 통증</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2 review-card p-8 md:p-10" style="background: #111108; border-color: #2A2A22;">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="text-accent text-xs tracking-widest">★★★★★</span>
+            <span class="text-gray-600 text-xs ml-2">실제 회원 후기</span>
+          </div>
+          <blockquote class="font-serif font-light text-gray-200 leading-relaxed mb-6"
+                      style="font-size: 1.1rem; line-height: 1.8;">
+            "아침에 일어나면 늘 몸이 뻣뻣하고 무거웠는데, 2달 지나니까 아침 피로감이 진짜 줄었어요. 걸음걸이도 달라졌다고 주변에서 먼저 얘기해줘서 놀랐습니다."
+          </blockquote>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+            <div class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+              <span class="text-xs text-gray-400">박</span>
+            </div>
+            <div>
+              <p class="text-sm text-gray-300 font-light">박 ○○ 님</p>
+              <p class="text-xs text-gray-600">30대 · 체형 불균형·피로감</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-3 review-card p-8 md:p-10" style="background: #111108; border-color: #2A2A22;">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="text-accent text-xs tracking-widest">★★★★★</span>
+            <span class="text-gray-600 text-xs ml-2">실제 회원 후기</span>
+          </div>
+          <blockquote class="font-serif font-light text-gray-200 leading-relaxed mb-6"
+                      style="font-size: 1.1rem; line-height: 1.8;">
+            "수술 후에 운동을 어떻게 해야 할지 몰라서 1년을 못했는데, 여기서 단계별로 접근해줬어요. 부담 없이 몸을 되찾아가는 느낌입니다."
+          </blockquote>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+            <div class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+              <span class="text-xs text-gray-400">최</span>
+            </div>
+            <div>
+              <p class="text-sm text-gray-300 font-light">최 ○○ 님</p>
+              <p class="text-xs text-gray-600">60대 · 수술 후 운동 재시작</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Inline CTA -->
+      <div class="reveal mt-16 text-center">
+        <a href="#cta"
+           class="inline-flex items-center gap-3 border border-gray-600 text-gray-300 px-8 py-4 text-sm font-light tracking-widest hover:border-accent hover:text-accent transition-all duration-300">
+          나도 달라질 수 있을까요? →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       6. 공간 소개 SECTION
+  ============================== -->
+  <section id="space" class="py-28 md:py-36 bg-paper">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+
+      <!-- Label -->
+      <div class="reveal flex items-center gap-4 mb-10">
+        <span class="thin-line"></span>
+        <span class="section-no">05 · THE SPACE</span>
+      </div>
+
+      <!-- Headline -->
+      <div class="reveal reveal-delay-1 mb-6">
+        <h2 class="font-serif font-medium leading-tight text-ink"
+            style="font-size: clamp(1.9rem, 4.5vw, 3.6rem); letter-spacing: -0.02em; line-height: 1.25;">
+          붐비지 않습니다.<br/>
+          <span class="text-muted">조용하고, 집중됩니다.</span>
+        </h2>
+      </div>
+
+      <p class="reveal reveal-delay-2 text-muted font-light leading-relaxed mb-20 max-w-xl"
+         style="font-size: 1.05rem; line-height: 1.9;">
+        수십 명이 오가는 대형 센터가 아닙니다.<br/>
+        당신의 수업 시간 동안, 이 공간은 당신만을 위합니다.
+      </p>
+
+      <!-- Image grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-16">
+        <div class="reveal img-placeholder aspect-square rounded-none overflow-hidden">
+          <div class="w-full h-full flex flex-col items-center justify-center gap-2 p-4 text-center">
+            <span class="text-3xl opacity-20">▭</span>
+            <span class="text-xs text-muted font-light tracking-wider">웨이트존</span>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-1 img-placeholder aspect-square">
+          <div class="w-full h-full flex flex-col items-center justify-center gap-2 p-4 text-center">
+            <span class="text-3xl opacity-20">▭</span>
+            <span class="text-xs text-muted font-light tracking-wider">스트레칭존</span>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2 img-placeholder aspect-square">
+          <div class="w-full h-full flex flex-col items-center justify-center gap-2 p-4 text-center">
+            <span class="text-3xl opacity-20">▭</span>
+            <span class="text-xs text-muted font-light tracking-wider">상담 공간</span>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-3 img-placeholder aspect-square">
+          <div class="w-full h-full flex flex-col items-center justify-center gap-2 p-4 text-center">
+            <span class="text-3xl opacity-20">▭</span>
+            <span class="text-xs text-muted font-light tracking-wider">바디케어존</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Space features -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
+        <div class="reveal bg-paper p-8">
+          <h4 class="font-serif font-medium text-ink text-lg mb-3">프라이빗</h4>
+          <p class="text-muted text-sm font-light leading-relaxed">수업 중 다른 회원과 공간이 겹치지 않습니다. 당신만을 위한 집중 환경입니다.</p>
+        </div>
+        <div class="reveal reveal-delay-1 bg-paper p-8">
+          <h4 class="font-serif font-medium text-ink text-lg mb-3">깨끗하고 밝음</h4>
+          <p class="text-muted text-sm font-light leading-relaxed">병원처럼 차갑지 않고, 헬스장처럼 복잡하지 않습니다. 편안하게 집중할 수 있는 환경.</p>
+        </div>
+        <div class="reveal reveal-delay-2 bg-paper p-8">
+          <h4 class="font-serif font-medium text-ink text-lg mb-3">접근성</h4>
+          <p class="text-muted text-sm font-light leading-relaxed">경남 진주시 초전북로39번길 6-22 1층. 주차 가능, 1층 접근으로 편리합니다.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       7. 브랜드 철학 SECTION
+  ============================== -->
+  <section id="philosophy" class="py-28 md:py-40 bg-ink text-white overflow-hidden relative">
+
+    <!-- Large background text -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden select-none">
+      <span class="font-serif font-medium text-white opacity-3 whitespace-nowrap"
+            style="font-size: clamp(5rem, 15vw, 18rem); letter-spacing: -0.05em; opacity: 0.025;">BODY CARE</span>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
+
+      <!-- Label -->
+      <div class="reveal flex items-center gap-4 mb-10">
+        <span class="thin-line"></span>
+        <span class="section-no" style="color: #8C8A84;">06 · PHILOSOPHY</span>
+      </div>
+
+      <!-- Main quote 1 -->
+      <div class="reveal mb-16 md:mb-24">
+        <blockquote class="font-serif font-light text-white"
+                    style="font-size: clamp(1.6rem, 4vw, 3.2rem); line-height: 1.5; letter-spacing: -0.01em;">
+          "몸은 버티는 대상이 아니라<br/>
+          <span style="color: #C8B89A;">관리받아야 하는 기준</span>입니다."
+        </blockquote>
+      </div>
+
+      <!-- Divider -->
+      <div class="reveal w-full h-px bg-gray-800 mb-16 md:mb-24"></div>
+
+      <!-- Main quote 2 -->
+      <div class="reveal mb-16 md:mb-24">
+        <blockquote class="font-serif font-light text-gray-300"
+                    style="font-size: clamp(1.3rem, 3vw, 2.4rem); line-height: 1.6; letter-spacing: -0.01em;">
+          "우리는 회원 수보다<br/>
+          한 사람의 몸 상태를<br/>
+          더 중요하게 생각합니다."
+        </blockquote>
+      </div>
+
+      <!-- Values list -->
+      <div class="reveal grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 border-t border-gray-800">
+
+        <div>
+          <p class="text-xs text-accent tracking-widest mb-4">APPROACH</p>
+          <h4 class="font-serif font-medium text-white text-xl mb-3">원인 우선</h4>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">증상을 없애는 것보다 왜 그 증상이 생겼는지를 먼저 찾습니다. 원인이 해결되면 증상은 따라옵니다.</p>
+        </div>
+
+        <div>
+          <p class="text-xs text-accent tracking-widest mb-4">STANDARD</p>
+          <h4 class="font-serif font-medium text-white text-xl mb-3">개인화</h4>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">당신과 같은 몸은 없습니다. 그래서 당신과 같은 프로그램도 있을 수 없습니다. 모든 수업은 처음부터 다시 설계됩니다.</p>
+        </div>
+
+        <div>
+          <p class="text-xs text-accent tracking-widest mb-4">GOAL</p>
+          <h4 class="font-serif font-medium text-white text-xl mb-3">지속성</h4>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">3개월에 극적으로 변하는 것보다, 평생 유지할 수 있는 몸을 만드는 것이 목적입니다.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       8. FINAL CTA SECTION
+  ============================== -->
+  <section id="cta" class="py-28 md:py-40 bg-paper">
+    <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
+
+      <!-- Label -->
+      <div class="reveal flex items-center justify-center gap-4 mb-10">
+        <span class="thin-line"></span>
+        <span class="section-no">07 · START HERE</span>
+        <span class="thin-line"></span>
+      </div>
+
+      <!-- Headline -->
+      <div class="reveal reveal-delay-1 mb-8">
+        <h2 class="font-serif font-medium leading-tight text-ink"
+            style="font-size: clamp(1.7rem, 4vw, 3.2rem); letter-spacing: -0.02em; line-height: 1.35;">
+          싼 PT를 찾고 있다면<br/>
+          더바른바디는 맞지 않을 수 있습니다.
+        </h2>
+      </div>
+
+      <div class="reveal reveal-delay-2 mb-16">
+        <p class="text-muted font-light leading-relaxed max-w-lg mx-auto"
+           style="font-size: clamp(1rem, 2.2vw, 1.2rem); line-height: 1.9;">
+          하지만 정말 몸을 바꾸고 싶다면<br/>
+          <strong class="text-ink font-medium">접근 방식부터 달라야 합니다.</strong>
+        </p>
+      </div>
+
+      <!-- Main CTA -->
+      <div class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="tel:010-0000-0000"
+           class="inline-flex items-center justify-center gap-3 bg-ink text-white px-10 py-5 text-sm font-medium tracking-widest hover:bg-gray-900 transition-all duration-300">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 2H10.5M2 8C2 4.686 4.686 2 8 2C11.314 2 14 4.686 14 8C14 11.314 11.314 14 8 14C4.686 14 2 11.314 2 8Z" stroke="white" stroke-width="1.2"/>
+            <path d="M3.5 5.5C4.8 3.5 6.2 2.5 8 2.5" stroke="white" stroke-width="1.2"/>
+            <path d="M6 9.5L7.5 8V5" stroke="white" stroke-width="1.2"/>
+          </svg>
+          전화 상담 문의
+        </a>
+        <a href="https://pf.kakao.com/"
+           class="inline-flex items-center justify-center gap-3 border border-ink text-ink px-10 py-5 text-sm font-medium tracking-widest hover:bg-ink hover:text-white transition-all duration-300">
+          카카오톡 문의
+        </a>
+      </div>
+
+      <!-- Naver Map Link -->
+      <div class="reveal reveal-delay-4">
+        <a href="https://naver.me/GRDffsTY" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-muted text-sm font-light hover:text-ink transition-colors duration-300 tracking-wider">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="6" r="2.5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M7 1C4.239 1 2 3.239 2 6C2 9.5 7 13 7 13C7 13 12 9.5 12 6C12 3.239 9.761 1 7 1Z" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+          네이버 지도로 위치 확인
+        </a>
+        <p class="mt-3 text-muted text-xs font-light tracking-wider">경남 진주시 초전북로39번길 6-22 1층</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="bg-ink text-gray-600 py-12 border-t border-gray-800">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row justify-between gap-8">
+
+        <div>
+          <p class="font-serif font-medium text-white text-sm tracking-widest mb-3">더바른바디</p>
+          <p class="text-xs font-light leading-relaxed">경남 진주시 초전북로39번길 6-22 1층<br/>진주 프리미엄 바디케어 센터</p>
+        </div>
+
+        <div>
+          <p class="text-xs tracking-widest mb-3 text-gray-500">CONTACT</p>
+          <p class="text-xs font-light leading-relaxed">전화 문의: 상단 CTA 버튼 이용<br/>카카오톡 문의 가능</p>
+        </div>
+
+        <div>
+          <p class="text-xs tracking-widest mb-3 text-gray-500">KEYWORDS</p>
+          <p class="text-xs font-light leading-relaxed text-gray-700">진주PT · 진주체형교정 · 진주통증케어<br/>진주재활운동 · 진주시니어운동 · 진주바디케어</p>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-gray-800">
+        <p class="text-xs text-gray-700 font-light">© 더바른바디. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==============================
+       STICKY CTA (mobile)
+  ============================== -->
+  <div id="sticky-cta" class="md:hidden bg-ink border-t border-gray-800 px-4 py-3 safe-bottom">
+    <div class="flex gap-3">
+      <a href="tel:010-0000-0000"
+         class="flex-1 flex items-center justify-center gap-2 bg-white text-ink py-3.5 text-xs font-medium tracking-widest">
+        전화 상담
+      </a>
+      <a href="#cta"
+         class="flex-1 flex items-center justify-center gap-2 border border-gray-600 text-white py-3.5 text-xs font-medium tracking-widest">
+        카카오 문의
+      </a>
+    </div>
+  </div>
+
+
+  <!-- ==============================
+       JAVASCRIPT
+  ============================== -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Sticky CTA show/hide
+    const stickyCta = document.getElementById('sticky-cta');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight * 0.6) {
+        stickyCta.classList.add('show');
+      } else {
+        stickyCta.classList.remove('show');
+      }
+    });
+
+    // Intersection Observer for reveal animations
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+          // Close mobile menu if open
+          document.getElementById('mobile-menu').classList.add('hidden');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
