@@ -199,9 +199,12 @@
   ============================== -->
   <section id="hero" class="min-h-screen flex flex-col justify-center relative overflow-hidden bg-ink">
 
-    <!-- Background texture -->
-    <div class="absolute inset-0 opacity-5"
-         style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <!-- Hero background image -->
+    <img src="./images/space-equipment.jpg"
+         alt="더바른바디 운동 공간"
+         class="absolute inset-0 w-full h-full object-cover object-center opacity-20"/>
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.75) 60%, rgba(10,10,10,0.85) 100%);"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-6 md:px-12 pt-28 pb-20">
 
@@ -728,30 +731,51 @@
 
       <!-- Image grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-16">
-        <div class="reveal img-placeholder aspect-square rounded-none overflow-hidden">
-          <div class="w-full h-full flex flex-col items-center justify-center gap-2 p-4 text-center">
-            <span class="text-3xl opacity-20">▭</span>
-            <span class="text-xs text-muted font-light tracking-wider">웨이트존</span>
+
+        <!-- 웨이트존 : images/space-gym.jpg (전체 운동 공간 전경) -->
+        <div class="reveal overflow-hidden aspect-square relative group">
+          <img src="./images/space-gym.jpg"
+               alt="더바른바디 웨이트존"
+               class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute bottom-0 left-0 right-0 px-3 py-2.5"
+               style="background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);">
+            <span class="text-xs text-white font-light tracking-wider">웨이트존</span>
           </div>
         </div>
-        <div class="reveal reveal-delay-1 img-placeholder aspect-square">
-          <div class="w-full h-full flex flex-col items-center justify-center gap-2 p-4 text-center">
-            <span class="text-3xl opacity-20">▭</span>
-            <span class="text-xs text-muted font-light tracking-wider">스트레칭존</span>
+
+        <!-- 바디케어존 : images/space-care.jpg (케어 룸) -->
+        <div class="reveal reveal-delay-1 overflow-hidden aspect-square relative group">
+          <img src="./images/space-care.jpg"
+               alt="더바른바디 바디케어존"
+               class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute bottom-0 left-0 right-0 px-3 py-2.5"
+               style="background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);">
+            <span class="text-xs text-white font-light tracking-wider">바디케어존</span>
           </div>
         </div>
-        <div class="reveal reveal-delay-2 img-placeholder aspect-square">
-          <div class="w-full h-full flex flex-col items-center justify-center gap-2 p-4 text-center">
-            <span class="text-3xl opacity-20">▭</span>
-            <span class="text-xs text-muted font-light tracking-wider">상담 공간</span>
+
+        <!-- 입구·외관 : images/space-exterior.jpg (외관 사진) -->
+        <div class="reveal reveal-delay-2 overflow-hidden aspect-square relative group">
+          <img src="./images/space-exterior.jpg"
+               alt="더바른바디 외관"
+               class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute bottom-0 left-0 right-0 px-3 py-2.5"
+               style="background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);">
+            <span class="text-xs text-white font-light tracking-wider">입구 · 외관</span>
           </div>
         </div>
-        <div class="reveal reveal-delay-3 img-placeholder aspect-square">
-          <div class="w-full h-full flex flex-col items-center justify-center gap-2 p-4 text-center">
-            <span class="text-3xl opacity-20">▭</span>
-            <span class="text-xs text-muted font-light tracking-wider">바디케어존</span>
+
+        <!-- 기구존 : images/space-equipment.jpg (기구 클로즈업) -->
+        <div class="reveal reveal-delay-3 overflow-hidden aspect-square relative group">
+          <img src="./images/space-equipment.jpg"
+               alt="더바른바디 운동 기구"
+               class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"/>
+          <div class="absolute bottom-0 left-0 right-0 px-3 py-2.5"
+               style="background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);">
+            <span class="text-xs text-white font-light tracking-wider">기구존</span>
           </div>
         </div>
+
       </div>
 
       <!-- Space features -->
@@ -874,14 +898,14 @@
 
       <!-- Main CTA -->
       <div class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 justify-center mb-12">
-        <a href="tel:010-0000-0000"
+        <a href="tel:010-7166-4229"
            class="inline-flex items-center justify-center gap-3 bg-ink text-white px-10 py-5 text-sm font-medium tracking-widest hover:bg-gray-900 transition-all duration-300">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.5 2H10.5M2 8C2 4.686 4.686 2 8 2C11.314 2 14 4.686 14 8C14 11.314 11.314 14 8 14C4.686 14 2 11.314 2 8Z" stroke="white" stroke-width="1.2"/>
             <path d="M3.5 5.5C4.8 3.5 6.2 2.5 8 2.5" stroke="white" stroke-width="1.2"/>
             <path d="M6 9.5L7.5 8V5" stroke="white" stroke-width="1.2"/>
           </svg>
-          전화 상담 문의
+          전화 상담 · 010-7166-4229
         </a>
         <a href="https://pf.kakao.com/"
            class="inline-flex items-center justify-center gap-3 border border-ink text-ink px-10 py-5 text-sm font-medium tracking-widest hover:bg-ink hover:text-white transition-all duration-300">
@@ -920,7 +944,18 @@
 
         <div>
           <p class="text-xs tracking-widest mb-3 text-gray-500">CONTACT</p>
-          <p class="text-xs font-light leading-relaxed">전화 문의: 상단 CTA 버튼 이용<br/>카카오톡 문의 가능</p>
+          <p class="text-xs font-light leading-relaxed">
+            <a href="tel:010-7166-4229" class="text-gray-400 hover:text-accent transition-colors">010-7166-4229</a><br/>
+            카카오톡 문의 가능
+          </p>
+        </div>
+
+        <div>
+          <p class="text-xs tracking-widest mb-3 text-gray-500">HOURS</p>
+          <p class="text-xs font-light leading-relaxed">
+            평일·주말 OPEN 09:00<br/>
+            CLOSE 22:00
+          </p>
         </div>
 
         <div>
@@ -942,7 +977,7 @@
   ============================== -->
   <div id="sticky-cta" class="md:hidden bg-ink border-t border-gray-800 px-4 py-3 safe-bottom">
     <div class="flex gap-3">
-      <a href="tel:010-0000-0000"
+      <a href="tel:010-7166-4229"
          class="flex-1 flex items-center justify-center gap-2 bg-white text-ink py-3.5 text-xs font-medium tracking-widest">
         전화 상담
       </a>
