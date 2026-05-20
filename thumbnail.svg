@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A0A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A14;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C8B89A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C8B89A;stop-opacity:0" />
+    </linearGradient>
+    <!-- Subtle grid texture -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Left accent bar -->
+  <rect x="72" y="72" width="2" height="486" fill="#C8B89A" opacity="0.35"/>
+
+  <!-- Top label row -->
+  <text x="92" y="116" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif"
+        font-size="13" font-weight="400" fill="#C8B89A" letter-spacing="4">
+    JINJU · PREMIUM BODY CARE
+  </text>
+
+  <!-- Horizontal rule under label -->
+  <rect x="92" y="128" width="300" height="1" fill="url(#accentLine)" opacity="0.5"/>
+
+  <!-- Main brand name -->
+  <text x="92" y="230" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', 'NanumMyeongjo', serif"
+        font-size="74" font-weight="700" fill="#FFFFFF" letter-spacing="-1">
+    더바른바디
+  </text>
+
+  <!-- Tagline line 1 -->
+  <text x="92" y="308" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', serif"
+        font-size="32" font-weight="300" fill="#CCCCCC" letter-spacing="0">
+    몸을 다루는 방식이
+  </text>
+
+  <!-- Tagline line 2 with accent -->
+  <text x="92" y="358" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', serif"
+        font-size="32" font-weight="300" fill="#C8B89A" letter-spacing="0">
+    처음부터 다릅니다.
+  </text>
+
+  <!-- Divider -->
+  <rect x="92" y="398" width="48" height="1" fill="#C8B89A" opacity="0.7"/>
+
+  <!-- Sub info row -->
+  <text x="92" y="440" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif"
+        font-size="14" font-weight="300" fill="#7A7A72" letter-spacing="1">
+    진주 체형교정 · 통증케어 · 재활운동 · 시니어운동 · 완전 1:1
+  </text>
+
+  <!-- Address -->
+  <text x="92" y="470" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif"
+        font-size="13" font-weight="300" fill="#555550" letter-spacing="0.5">
+    경남 진주시 초전북로39번길 6-22 1층
+  </text>
+
+  <!-- Right side visual block -->
+  <!-- Large decorative circle -->
+  <circle cx="970" cy="315" r="240" fill="none" stroke="#C8B89A" stroke-width="1" opacity="0.08"/>
+  <circle cx="970" cy="315" r="180" fill="none" stroke="#C8B89A" stroke-width="1" opacity="0.06"/>
+  <circle cx="970" cy="315" r="120" fill="none" stroke="#C8B89A" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Right side text block -->
+  <text x="970" y="280" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif"
+        font-size="11" font-weight="400" fill="#C8B89A" letter-spacing="3" text-anchor="middle">
+    THE RIGHT BODY
+  </text>
+  <text x="970" y="325" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', serif"
+        font-size="15" font-weight="300" fill="#6A6A62" letter-spacing="1" text-anchor="middle">
+    움직임 분석 기반
+  </text>
+  <text x="970" y="355" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', serif"
+        font-size="15" font-weight="300" fill="#6A6A62" letter-spacing="1" text-anchor="middle">
+    프리미엄 바디케어
+  </text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="600" width="1200" height="30" fill="#C8B89A" opacity="0.06"/>
+  <text x="72" y="620" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif"
+        font-size="11" font-weight="300" fill="#555550" letter-spacing="1">
+    더바른바디 · thebarunbody
+  </text>
+</svg>
